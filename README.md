@@ -17,6 +17,10 @@ For this project I was given a task to create a functioning logo generator using
 
 
 
+https://user-images.githubusercontent.com/126821868/234170384-822da9c3-4511-4d45-a207-81bbe3d39e5c.mp4
+
+
+
 ## Code Examples
 
 Here I will be showing an example of a section I was stuck on but eventually discovered the solution to:
