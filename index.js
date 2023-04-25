@@ -20,7 +20,7 @@ function writeToFile(fileName, answers, callback) {
       shape = new circle();
       svg += `<circle cx="100" cy="100" r="90" fill="${answers.bgColor}"/>`;
     }
-    svg += `<text x="110" y="110" text-anchor="middle" font-size="40" fill="${answers.color}">${answers.text}</text>
+    svg += `<text x="105" y="110" text-anchor="middle" font-size="40" fill="${answers.color}">${answers.text}</text>
       </g>
     </svg>`;
   
