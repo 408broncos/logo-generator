@@ -1,7 +1,9 @@
+//acquiring shapes.js file, fs and inquier
 const { square, triangle, circle } = require("./lib/shapes.js");
 const fs = require("fs")
 const inquirer = require("inquirer");
 
+//setting the svg initial width and length logo prompt when logo.svg is created and users inputed shape choice
 function writeToFile(fileName, answers, callback) {
     let svg = `
       <svg version="1.1" width="300" height="200">
@@ -9,6 +11,7 @@ function writeToFile(fileName, answers, callback) {
           ${answers.shape}
     `;
   
+    //adding if, else and else if statments for user inputs based on shape selection
     let shape;
     if (answers.shape === "square") {
       shape = new square();
@@ -24,6 +27,7 @@ function writeToFile(fileName, answers, callback) {
       </g>
     </svg>`;
   
+    //when logo.svg is created a message "Generated logo.svg" is prompted in the terminal
     fs.writeFile(fileName, svg, (err) => {
       if (err) {
         console.log(err);
@@ -34,6 +38,7 @@ function writeToFile(fileName, answers, callback) {
   });
 }
 
+//users prompt choices when in terminal
 function promptUser(callback) {
   inquirer.prompt([
     {
@@ -59,7 +64,8 @@ function promptUser(callback) {
       message: "Choose the background color for your shape",
       type: "input",
     },
-  ]).then((answers) => {
+//if user enters more than 3 characters a console.log message appears telling the user "Must enter more than 3 characters"
+]).then((answers) => {
     if (answers.text.length > 3) {
       console.log("Must enter more than 3 characters");
       promptUser(callback);
@@ -71,5 +77,6 @@ function promptUser(callback) {
   });
 }
 
+//calling the promptUser function
 promptUser(() => {
 });
