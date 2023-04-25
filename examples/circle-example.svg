@@ -1,0 +1,7 @@
+
+      <svg version="1.1" width="300" height="200">
+        <g>
+          circle
+    <circle cx="100" cy="100" r="90" fill="#3A2449"/><text x="105" y="110" text-anchor="middle" font-size="40" fill="#FAF9FF">JBC</text>
+      </g>
+    </svg>
